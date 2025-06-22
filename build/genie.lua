@@ -17,9 +17,9 @@ local WITH_MINIAUDIO = 0
 local WITH_NULL = 1
 local WITH_TOOLS = 0
 
-if (os.is("Windows")) then
+if (os.ishost("Windows")) then
 	WITH_WINMM = 1
-elseif (os.is("macosx")) then
+elseif (os.ishost("macosx")) then
 	WITH_COREAUDIO = 1
 else
 	WITH_ALSA = 1
